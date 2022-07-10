@@ -1,0 +1,40 @@
+// Color Variables
+//$color-primary: #F40000;
+//$color-primary-dark: #ededed;
+
+$color-primary: #dddddd;
+$color-dark: #101419;
+
+
+$color-grey: #4A4D51;
+//$color-dark: #000000;
+
+//Font Variables
+$font-primary: "Lato", sans-serif;
+
+// Breakpoint Variables
+$bp-huge: 87.5em; //1400px
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px / 16px = 62.5% -> 1rem = 10px
+  background-color: #101419;
+
+  @media only screen and (max-width: $bp-huge) {
+    font-size: 50%;
+  }
+}
+

@@ -1,0 +1,383 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: #101419; }
+  @media only screen and (max-width: 87.5em) {
+    html {
+      font-size: 50%; } }
+
+.heading-1, .heading-2, .heading-3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
+
+.heading-1 {
+  font-size: 9rem;
+  color: #101419;
+  line-height: 1;
+  font-weight: 200; }
+
+.heading-2 {
+  font-size: 2.8rem;
+  color: #101419;
+  line-height: 1;
+  font-weight: 400; }
+
+.heading-3 {
+  font-size: 2.4rem;
+  color: #101419;
+  line-height: 1;
+  font-weight: 400; }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 3rem; }
+
+.mb-lg {
+  margin-bottom: 4rem; }
+
+.mb-hg {
+  margin-bottom: 8rem; }
+
+input {
+  border: none;
+  outline: none; }
+  input:focus, input:active {
+    outline: none; }
+  input::placeholder {
+    color: #4A4D51; }
+
+input[type="file"] {
+  display: none; }
+
+input[type="number"] {
+  appearance: none; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; }
+
+input[type="radio"] {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radiobutton appearance */
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  padding: 2px;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 2px solid #dddddd;
+  background-color: rgba(0, 0, 0, 0.01);
+  border-radius: 50%; }
+
+/* appearance for checked radiobutton */
+input[type="radio"]:checked {
+  background-color: #dddddd;
+  animation: radio-bg linear 1000ms; }
+
+input[type="radio"]:hover {
+  cursor: pointer; }
+
+input[type="submit"] {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radiobutton appearance */
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  padding: 2px;
+  color: rgba(0, 0, 0, 0.01);
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 2px solid #dddddd;
+  background-color: rgba(0, 0, 0, 0.01);
+  border-radius: 50%; }
+  input[type="submit"] input[type="submit"]:checked {
+    background-color: #dddddd;
+    color: #dddddd; }
+  input[type="submit"] input[type="submit"]:hover {
+    cursor: pointer; }
+
+@keyframes radio-bg {
+  0% {
+    background-color: rgba(0, 0, 0, 0.01); }
+  100% {
+    background-color: #dddddd; } }
+
+.hero {
+  background-color: #101419;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: repeat(6, 20vh);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-column: full-start / full-end; }
+  .hero__texto {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    grid-column: 1 / 4;
+    grid-row: 1 / 6;
+    font-size: 1.3rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    width: 35rem;
+    height: 40rem;
+    margin-top: 2rem;
+    padding: 2.5rem;
+    border: 1px solid #4A4D51;
+    border-radius: 2rem;
+    color: #dddddd;
+    background: linear-gradient(135deg, rgba(221, 221, 221, 0.15), rgba(16, 20, 25, 0.3));
+    animation: list--load-1 cubic-bezier(0.82, 0, 0.31, 0.99) 2000ms; }
+    .hero__texto--1 {
+      align-self: center;
+      justify-self: center;
+      line-height: 2.5rem; }
+  .hero__form {
+    grid-row: 1 / 6;
+    grid-column: center-start / center-end;
+    justify-self: center;
+    align-self: center; }
+  .hero__probabilities {
+    grid-row: 1 / 6;
+    grid-column: 8 / 11;
+    justify-self: center;
+    align-self: center;
+    margin-top: 2rem; }
+
+.form {
+  border: 1px solid #4A4D51;
+  display: grid;
+  width: 45rem;
+  height: 60rem;
+  font-family: "Lato", sans-serif;
+  border-radius: 2rem;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  grid-template-rows: repeat(6, 1fr) 3rem;
+  grid-template-columns: 5rem repeat(7, 5rem) 5rem;
+  background: linear-gradient(135deg, rgba(221, 221, 221, 0.15), rgba(16, 20, 25, 0.3));
+  animation: list--load-1 cubic-bezier(0.82, 0, 0.31, 0.99) 3000ms; }
+  .form__title {
+    font-size: 4rem;
+    grid-column: 1/-1;
+    justify-self: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    color: #dddddd;
+    grid-row: 1 / 2;
+    padding-top: 3rem; }
+  .form__label {
+    font-size: 3.0rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    color: #dddddd;
+    display: grid;
+    grid-column: repeat 2, 1fr;
+    align-items: center; }
+    .form__label--1 {
+      grid-column: 2 / -1;
+      grid-row: 2 / 3; }
+    .form__label--2 {
+      grid-column: 2 / -1;
+      grid-row: 3 / 4; }
+    .form__label--3 {
+      grid-column: 2 / -1;
+      grid-row: 4 / 5; }
+    .form__label--4 {
+      grid-column: 2 / -1;
+      padding-right: 7rem;
+      grid-row: 5 / 6; }
+    .form__label--5 {
+      grid-column: 1/-1;
+      justify-self: center;
+      grid-row: 6 / 8;
+      margin-bottom: 2rem;
+      align-self: center; }
+  .form__input {
+    grid-column: 2 / 3; }
+    .form__input--numeric {
+      font-size: 2.5rem;
+      width: 15rem;
+      align-self: flex-end;
+      background-color: rgba(16, 20, 25, 0.01);
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      grid-column: 2 / 4;
+      justify-self: flex-end;
+      color: #dddddd; }
+  .form__radio--1 {
+    align-self: center;
+    justify-self: flex-start; }
+    .form__radio--1:hover {
+      animation: radio--hover cubic-bezier(0.82, 0, 0.31, 0.99) 1500ms infinite; }
+  .form__radio--2 {
+    cursor: pointer; }
+    .form__radio--2:hover {
+      animation: radio--hover cubic-bezier(0.82, 0, 0.31, 0.99) 1500ms infinite; }
+  .form__icon {
+    filter: invert(100%) sepia(7%) saturate(1%) hue-rotate(216deg) brightness(106%) contrast(73%);
+    justify-self: center;
+    align-self: center;
+    cursor: pointer; }
+    .form__icon--1 {
+      height: 4rem;
+      grid-row: 6 / 7;
+      grid-column: 2 / 4; }
+    .form__icon--2 {
+      height: 3.4rem;
+      grid-row: 6 / 7;
+      grid-column: 7 / 9; }
+    .form__icon:hover {
+      animation: image--hover linear 1500ms infinite; }
+  .form__error {
+    color: red;
+    font-size: 1.4rem; }
+
+@keyframes image--hover {
+  0% {
+    transform: translateY(0%); }
+  50% {
+    transform: translateY(-5%);
+    filter: invert(99%) sepia(0%) saturate(7500%) hue-rotate(206deg) brightness(104%) contrast(103%); }
+  100% {
+    transform: translateY(0%); } }
+
+@keyframes list--load-1 {
+  0% {
+    transform: translateY(1%);
+    opacity: 0%; }
+  100% {
+    transform: translateY(0);
+    opacity: 100%; } }
+
+@keyframes radio--hover {
+  0% {
+    background-color: rgba(0, 0, 0, 0.01); }
+  50% {
+    background-color: rgba(221, 221, 221, 0.7); }
+  100% {
+    background-color: rgba(0, 0, 0, 0.01); } }
+
+.grid {
+  display: flex;
+  color: #dddddd;
+  font-family: "Lato", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  align-items: center;
+  background-color: #101419; }
+  .grid__table {
+    background-color: #101419;
+    outline: none;
+    padding-left: .4rem;
+    animation: grid--load-1 cubic-bezier(0.82, 0, 0.31, 0.99) 1000ms;
+    table-layout: fixed; }
+  .grid__column {
+    font-size: 1.4rem;
+    padding: 2.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400; }
+  .grid__row {
+    font-size: 1rem;
+    padding-top: .5rem;
+    font-weight: 400; }
+  .grid__body {
+    padding-top: 2rem;
+    justify-items: center; }
+
+@keyframes grid--load-1 {
+  0% {
+    transform: translateY(1%);
+    opacity: 0%; }
+  100% {
+    transform: translateY(0);
+    opacity: 100%; } }
+
+.probabilities {
+  border: 1px solid #4A4D51;
+  display: grid;
+  border-radius: 2rem;
+  align-items: center;
+  grid-template-rows: repeat(6, 1fr) 3rem;
+  grid-template-columns: 4rem repeat(7, 4rem) 3rem;
+  background: linear-gradient(135deg, rgba(221, 221, 221, 0.15), rgba(16, 20, 25, 0.3));
+  animation: list--load-1 cubic-bezier(0.82, 0, 0.31, 0.99) 2000ms;
+  width: 35rem;
+  height: 40rem; }
+  .probabilities__title {
+    font-size: 2.7rem;
+    grid-column: 1/-1;
+    justify-self: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    color: #dddddd;
+    grid-row: 1 / 2;
+    padding-top: 3rem; }
+  .probabilities__label {
+    font-size: 2rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    color: #dddddd;
+    display: grid;
+    grid-column: repeat 2, 1fr;
+    align-items: center; }
+    .probabilities__label--1 {
+      grid-column: 2 / -1;
+      grid-row: 2 / 3; }
+    .probabilities__label--2 {
+      grid-column: 2 / -1;
+      grid-row: 3 / 4; }
+    .probabilities__label--3 {
+      grid-column: 2 / -1;
+      grid-row: 4 / 5; }
+    .probabilities__label--4 {
+      grid-column: 2 / -1;
+      grid-row: 5 / 6; }
+    .probabilities__label--5 {
+      grid-column: 2 / -1;
+      grid-row: 6 / 7; }
+  .probabilities__input--numeric {
+    font-size: 1.5rem;
+    width: 10rem;
+    align-self: center;
+    background-color: rgba(16, 20, 25, 0.01);
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    grid-column: 2 / 4;
+    justify-self: flex-end;
+    color: #dddddd; }
+  .probabilities__error {
+    color: red;
+    font-size: 1.1rem; }
+
+@keyframes list--load-1 {
+  0% {
+    transform: translateY(1%);
+    opacity: 0%; }
+  100% {
+    transform: translateY(0);
+    opacity: 100%; } }

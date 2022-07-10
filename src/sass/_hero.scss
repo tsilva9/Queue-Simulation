@@ -1,0 +1,72 @@
+.hero {
+
+  background-color: $color-dark;
+  
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: grid;
+  grid-template-rows: repeat(6, 20vh);
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  grid-column: full-start / full-end;
+  
+  
+
+  &__texto {
+    display: flex;
+    flex-direction: column;
+
+    align-self: center;
+    justify-self: center;
+
+    grid-column: 1 / 4;
+    grid-row: 1 / 6;
+
+    font-size: 1.3rem;
+    font-family: $font-primary;
+    font-weight: 300;
+    
+    width: 35rem;
+    height: 40rem;
+    
+    margin-top: 2rem;
+    padding: 2.5rem;
+
+    border: 1px solid $color-grey;
+    border-radius: 2rem;
+
+    color: $color-primary;
+    background: linear-gradient(135deg, rgba($color-primary, 0.15), rgba($color-dark, 0.30));
+
+    animation: list--load-1 cubic-bezier(0.82, 0, 0.31, 0.99) 2000ms;
+    
+
+    &--1 {
+      align-self: center;
+      justify-self: center;
+      line-height: 2.5rem;
+    }
+  }
+
+  &__form {
+    grid-row: 1 / 6;
+    grid-column: center-start / center-end;
+    justify-self: center;
+    align-self: center;
+
+  }
+
+  &__probabilities {
+    grid-row: 1 / 6;
+    grid-column: 8 / 11;
+    justify-self: center;
+    align-self: center;
+    margin-top: 2rem;
+  }
+
+}

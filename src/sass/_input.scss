@@ -1,0 +1,105 @@
+
+input {
+  border: none;
+  outline: none;
+  
+      &:focus, &:active {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $color-grey;
+      }
+}
+
+input[type="file"] {
+  display: none;
+}
+
+
+input[type="number"] {
+  appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type="radio"] {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radiobutton appearance */
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  padding: 2px;
+  /* background-color only for content */
+  background-clip: content-box;
+  // border: 2px solid $color-primary;
+  border: 2px solid $color-primary;
+  background-color: rgba(black, 0.01);
+  border-radius: 50%;
+}
+
+/* appearance for checked radiobutton */
+input[type="radio"]:checked {
+  background-color: $color-primary;
+  animation: radio-bg linear 1000ms;
+}
+
+input[type="radio"]:hover {
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radiobutton appearance */
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  padding: 2px;
+  color: rgba(black, 0.01);
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 2px solid $color-primary;
+  background-color: rgba(black, 0.01);
+  border-radius: 50%;
+
+  input[type="submit"]:checked {
+    background-color: $color-primary;
+    color: $color-primary;
+    
+  }
+
+  input[type="submit"]:hover {
+    cursor: pointer;
+    
+  }
+  
+}
+
+
+@keyframes radio-bg {
+  0% {
+    background-color: rgba(black, 0.01);
+    //opacity: 0%;
+  }
+
+  100% {
+    background-color: $color-primary;
+    
+    //opacity: 100%;
+  }
+}
